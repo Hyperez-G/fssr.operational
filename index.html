@@ -201,6 +201,43 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="voting-section text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-4">Voter Registration & Ballot</h5>
+                            <form id="voteForm">
+                                <div class="row g-4 justify-content-center">
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control form-control-lg" id="voterCodename" placeholder="Codename" required>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control form-control-lg" id="voterId" placeholder="Republic ID" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row justify-content-center mt-4">
+                                    <div class="col-md-10">
+                                        <select class="form-select form-select-lg" id="voteSelect" required>
+                                            <option value="" selected disabled>Select a party</option>
+                                            <option value="SSP">Smuglianka Socialist Party</option>
+                                            <option value="RFP">Rasputin Federation Party</option>
+                                            <option value="IRP">Imperial Restoration Party</option>
+                                            <option value="ISP">Imperial Socialist Party</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">Cast Vote</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
             </div>
         </section>
 
@@ -659,5 +696,99 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script>
+        // Add container for alert messages
+        const alertContainer = document.createElement('div');
+        alertContainer.id = 'alertContainer';
+        alertContainer.className = 'mt-3';
+        document.querySelector('.voting-section').appendChild(alertContainer);
+        
+        document.getElementById('voteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const voterData = {
+                codename: document.getElementById('voterCodename').value,
+                id: document.getElementById('voterId').value,
+                party: document.getElementById('voteSelect').value
+            };
+        
+            if (validateVoter(voterData)) {
+                castVote(voterData);
+                
+                // Disable all form elements
+                const formElements = this.elements;
+                for (let element of formElements) {
+                    element.disabled = true;
+                }
+                
+                // Show vote confirmation
+                const voteTime = new Date().toLocaleString();
+                const alertMessage = `
+                    <div class="alert alert-success">
+                        <h5>Vote Recorded Successfully!</h5>
+                        <p class="mb-0">Voter: ${voterData.codename}</p>
+                        <p class="mb-0">Party: ${voterData.party}</p>
+                        <p class="mb-0">Time: ${voteTime}</p>
+                    </div>
+                `;
+                alertContainer.innerHTML = alertMessage;
+            }
+        });
+        
+        function validateVoter(voter) {
+            if (voter.id.length < 6) {
+                alertContainer.innerHTML = `
+                    <div class="alert alert-danger">
+                        Republic ID must be at least 6 characters long
+                    </div>
+                `;
+                return false;
+            }
+            return true;
+        }
+        
+        function castVote(voter) {
+            const partyCards = document.querySelectorAll('.card');
+            let targetCard;
+            
+            partyCards.forEach(card => {
+                const cardTitle = card.querySelector('.card-title');
+                if (cardTitle && cardTitle.textContent.includes(voter.party)) {
+                    targetCard = card;
+                }
+            });
+        
+            if (targetCard) {
+                const bars = targetCard.querySelectorAll('.bar');
+                let filledBars = 0;
+                
+                bars.forEach(bar => {
+                    if (bar.classList.contains('bg-danger')) {
+                        filledBars++;
+                    }
+                });
+        
+                if (filledBars < 5) {
+                    bars[filledBars].classList.remove('bg-secondary');
+                    bars[filledBars].classList.add('bg-danger');
+                    
+                    if (filledBars + 1 === 5) {
+                        setTimeout(() => {
+                            alertContainer.innerHTML += `
+                                <div class="alert alert-warning mt-2">
+                                    <strong>${targetCard.querySelector('.card-title').textContent}</strong> has won the election!
+                                </div>
+                            `;
+                        }, 1000);
+                    }
+                }
+            }
+        }
+        </script>
+        
 </body>
 </html>
