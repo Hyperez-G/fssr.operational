@@ -63,6 +63,89 @@
             </div>
         </section>
 
+        <!-- News Ticker Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <div class="section-title text-center" data-aos="fade-up">
+                    <h2>Election Updates</h2>
+                    <p>Live News Coverage</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="news-ticker-container" data-aos="fade-up" data-aos-delay="100">
+                            <div class="ticker-header">
+                                <span class="badge bg-danger p-2">
+                                    <i class="bi bi-broadcast me-1"></i> LIVE
+                                </span>
+                            </div>
+                            <div class="ticker-content">
+                                <div class="ticker-moving">
+                                    <span><i class="bi bi-arrow-right-circle me-2"></i>Breaking: Election Commission Announces Final Preparations for National Vote</span>
+                                    <span><i class="bi bi-arrow-right-circle me-2"></i>SSP Rally Draws Massive Crowds in Capital Region</span>
+                                    <span><i class="bi bi-arrow-right-circle me-2"></i>RFP Unveils New Economic Development Plan</span>
+                                    <span><i class="bi bi-arrow-right-circle me-2"></i>IRP Leadership Addresses Military Reform Proposals</span>
+                                    <span><i class="bi bi-arrow-right-circle me-2"></i>ISP Gains Momentum in Industrial Districts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+        .news-ticker-container {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 60px;
+        }
+
+        .ticker-header {
+            min-width: 100px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 2px solid #eee;
+        }
+
+        .ticker-content {
+            flex-grow: 1;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+
+        .ticker-moving {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker 40s linear infinite;
+        }
+
+        .ticker-moving span {
+            display: inline-block;
+            padding: 0 50px;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        @keyframes ticker {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+
+        .ticker-moving span i {
+            color: #dc3545;
+        }
+        </style>
+
+
         <!-- Political Parties Section -->
         <section id="parties" class="section">
             <div class="container section-title" data-aos="fade-up">
