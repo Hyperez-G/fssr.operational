@@ -1,0 +1,597 @@
+<-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Rasputin Federation</title>
+    <meta content="Global country resources and military dashboard" name="description">
+    <meta content="country, resources, military, strategy" name="keywords">
+
+    <!-- Same CSS imports as original -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+    
+        <div class="profile-img">
+            <img src="assets/img/RFP-Logo.jpg" alt="" class="img-fluid rounded-circle">
+        </div>
+    
+        <a href="index5.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename" style="font-size: 1.5rem; text-align: center; width: 100%; padding: 0 15px;">Fourth Supreme Republic of Rasputin Federation</h1>
+        </a>
+    
+        <div class="social-links text-center">
+            <a href="#" class="alliance"><i class="bi bi-shield-check"></i></a>
+            <a href="#" class="trade"><i class="bi bi-cart"></i></a>
+            <a href="#" class="diplomacy"><i class="bi bi-flag"></i></a>
+            <a href="#" class="intelligence"><i class="bi bi-eye"></i></a>
+        </div>
+    
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#overview" class="active"><i class="bi bi-globe navicon"></i>Overview</a></li>
+                <li><a href="#resources"><i class="bi bi-box-seam navicon"></i>National Focus</a></li>
+                <li><a href="#military"><i class="bi bi-shield navicon"></i>Military</a></li>
+                <li><a href="#research"><i class="bi bi-lightbulb navicon"></i>Research</a></li>
+                <li><a href="#stability"><i class="bi bi-graph-up navicon"></i>Stability</a></li>
+                <li><a href="#advanced-research"><i class="bi bi-diamond-half navicon"></i>Advanced Research</a></li>
+            </ul>
+        </nav>          
+    </header>
+    
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background" style="background-color: rgb(0, 2, 8);">
+            <img src="assets/img/background-1.png" alt="" data-aos="fade-in" style="opacity: 0.6;">
+            <div class="container" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 2;">
+                <h2 style="color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Fourth Supreme Republic of Rasputin Federation</h2>
+                <p style="color: #fff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);"> <span class="typed" data-typed-items="Democratic Nationalist, Economic Strength, and Business Growth."></span></p>
+            </div>
+        </section>
+
+        <!-- Live News Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <div class="section-title text-center" data-aos="fade-up">
+                    <h2>Republic Updates</h2>
+                    <p>Live News Coverage</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="live-news-container" data-aos="fade-up" data-aos-delay="100">
+                            <div class="news-header">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-broadcast me-1"></i> LIVE UPDATES
+                                </span>
+                            </div>
+                            <div class="news-content">
+                                <ul class="news-list">
+                                    <li class="news-item">
+                                        <i class="bi bi-arrow-right-circle"></i>
+                                        BREAKING NEWS: The Federation Party is set to announce new moral laws and carry out the execution of the revolution’s traitor.
+                                        <span class="news-time">April 11, 2025</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+        .live-news-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .news-header {
+            margin-bottom: 20px;
+        }
+
+        .news-header .badge {
+            font-size: 1rem;
+            padding: 8px 15px;
+        }
+
+        .news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .news-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item i {
+            color: #dc3545;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .news-time {
+            margin-left: auto;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        </style>
+
+        <!-- Overview Section -->
+        <section id="overview" class="about section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>National Overview</h2>
+                <p>Current state of the nation and key statistics</p>
+            </div>
+
+            <div class="container" data-aos="fade-up">
+                <div class="row stats gy-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item">
+                            <i class="bi bi-map"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="47" class="purecounter">0</span>
+                            <p>Total States</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item">
+                            <i class="bi bi-flag"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="18" class="purecounter">0</span>
+                            <p>Total Republics</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item">
+                            <i class="bi bi-graph-up"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="52" data-purecounter-suffix="%" class="purecounter">0</span>
+                            <p>Total Stability %</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item">
+                            <i class="bi bi-star"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="6000" class="purecounter">0</span>
+                            <p>Political Power</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Political Focus Tree Section -->
+        <section id="resources" class="section light-background">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>National Focus</h2>
+                <p>Political and Economic Development Path</p>
+            </div>
+
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm text-center" data-aos="fade-up">
+                            <div class="card-body">
+                                <i class="bi bi-bank fs-1 text-primary"></i>
+                                <h5 class="mt-3">Economic Reform</h5>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar" style="width: 78%"></div>
+                                </div>
+                                <div class="text-muted small mb-2">
+                                    <i class="bi bi-arrow-up-circle text-success"></i> Stability +10%<br>
+                                    <i class="bi bi-arrow-up-circle text-success"></i> Production +20%<br>
+                                </div>
+                                <span class="badge bg-primary">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow-sm text-center" data-aos="fade-up">
+                            <div class="card-body">
+                                <i class="bi bi-question-circle fs-1 text-secondary"></i>
+                                <h5 class="mt-3">Focus Slot</h5>
+                                <span class="badge bg-secondary">Empty</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow-sm text-center" data-aos="fade-up">
+                            <div class="card-body">
+                                <i class="bi bi-question-circle fs-1 text-secondary"></i>
+                                <h5 class="mt-3">Focus Slot</h5>
+                                <span class="badge bg-secondary">Empty</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow-sm text-center" data-aos="fade-up">
+                            <div class="card-body">
+                                <i class="bi bi-question-circle fs-1 text-secondary"></i>
+                                <h5 class="mt-3">Focus Slot</h5>
+                                <span class="badge bg-secondary">Empty</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Military Section -->
+        <section id="military" class="skills section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Military Strength</h2>
+                <p>Current military capabilities and readiness levels</p>
+            </div>
+
+            <div class="container" data-aos="fade-up">
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <div class="progress">
+                            <span class="skill">Army Strength <i class="val">53%</i></span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">Naval Power <i class="val">47%</i></span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 47%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="progress">
+                            <span class="skill">Air Superiority <i class="val">64%</i></span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 64%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">Special Forces <i class="val">72%</i></span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            
+            
+
+        <!-- Add after Military Section -->
+        <section id="research" class="section light-background">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Research Progress</h2>
+                <p>Current technological advancement and research projects</p>
+            </div>
+
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <div class="research-item" data-aos="fade-up">
+                            <h4><i class=""></i> Electro-magnetic Pulse Satellite</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 57%" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">57%</div>
+                            </div>
+                            <p>Time remaining: ??? days</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="research-item" data-aos="fade-up">
+                            <h4><i class=""></i> Advanced Hypersonic Missiles</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 76%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">76%</div>
+                            </div>
+                            <p>Time remaining: ??? days</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="research-item" data-aos="fade-up">
+                            <h4><i class=""></i> Electro-magnetic Orbital Weapon</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">100%</div>
+                            </div>
+                            <p>Research Completed</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="research-item" data-aos="fade-up">
+                            <h4><i class=""></i> Orbital Defense System</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 9%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">9%</div>
+                            </div>
+                            <p>Time remaining: ??? days</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+            
+
+        <section id="stability" class="section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>National Stability</h2>
+                <p>State-by-state stability analysis</p>
+            </div>
+        
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                        <div class="card stability-card">
+                            <div class="card-body">
+                                <h4 class="card-title">Europe</h4>
+                                <div class="stability-progress mb-4">
+                                    <span class="skill">Stability <i class="val">52%</i></span>
+                                    <div class="progress-bar-wrap">
+                                        <div class="progress-bar high" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>War Support</span>
+                                        <span class="badge bg-warning">Medium</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Political Unity</span>
+                                        <span class="badge bg-danger">Weak</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Economic Status</span>
+                                        <span class="badge bg-success">Good</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card stability-card">
+                            <div class="card-body">
+                                <h4 class="card-title">Middle East</h4>
+                                <div class="stability-progress mb-4">
+                                    <span class="skill">Stability <i class="val">55%</i></span>
+                                    <div class="progress-bar-wrap">
+                                        <div class="progress-bar medium" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>War Support</span>
+                                        <span class="badge bg-warning">Medium</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Political Unity</span>
+                                        <span class="badge bg-warning">Moderate</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Economic Status</span>
+                                        <span class="badge bg-success">Good</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card stability-card">
+                            <div class="card-body">
+                                <h4 class="card-title">East Asia</h4>
+                                <div class="stability-progress mb-4">
+                                    <span class="skill">Stability <i class="val">98.6%</i></span>
+                                    <div class="progress-bar-wrap">
+                                        <div class="progress-bar low" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="background-color: #dc3545;"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>War Support</span>
+                                        <span class="badge bg-success">High</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Political Unity</span>
+                                        <span class="badge bg-success">Powerful</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Economic Status</span>
+                                        <span class="badge bg-success">Excellent</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+        
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card stability-card">
+                            <div class="card-body">
+                                <h4 class="card-title">South Asia</h4>
+                                <div class="stability-progress mb-4">
+                                    <span class="skill">Stability <i class="val">93%</i></span>
+                                    <div class="progress-bar-wrap">
+                                        <div class="progress-bar medium" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>War Support</span>
+                                        <span class="badge bg-warning">Medium</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Political Unity</span>
+                                        <span class="badge bg-success">Strong</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Economic Status</span>
+                                        <span class="badge bg-success">Excellent</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Advanced Research Section -->
+        <section id="advanced-research" class="section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Advanced Scientific Research</h2>
+                <p>Strategic Materials and Experimental Resources</p>
+            </div>
+
+            <div class="container">
+
+                <!-- Research Projects -->
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm" data-aos="fade-up">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="card-title mb-0"><i class="bi bi-radioactive"></i> The Gadget</h4>
+                                    <span class="badge bg-dark">Panzer Industries</span>
+                                </div>
+                                
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+                                </div>
+
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Material</th>
+                                            <th>Current</th>
+                                            <th>Required</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>NOVA-6</strong></td>
+                                            <td>50.0 units</td>
+                                            <td>50.0 units</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Havarnite H-92</strong></td>
+                                            <td>25.0 units</td>
+                                            <td>25.0 units</td>
+                                            <td><span class="badge bg-warning">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Vibranium</strong></td>
+                                            <td>25.0 units</td>
+                                            <td>25.0 units</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="mt-3 text-end">
+                                    <small class="text-muted">Research Lead: Panzer Industries</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm" data-aos="fade-up">
+                            <div class="card-body p-4">
+                                <h4 class="card-title mb-3"><i class="bi bi-question-circle"></i> Scientific Research Slot</h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-danger" style="width: 0.00%">0.00%</div>
+                                </div>
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Material</th>
+                                            <th>Current</th>
+                                            <th>Required</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Material Slot</strong></td>
+                                            <td>0.00 units</td>
+                                            <td>0.00 units</td>
+                                            <td><span class="badge bg-secondary">Empty</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span></span> <strong class="px-1 sitename">Fourth Supreme Republic of Rasputin</strong> <span>2025</span></p>
+            </div>
+            <div class="credits text-center">
+                <p>Powered by <a href="#" class="fw-bold">Panzer Industries</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Same JS imports as original -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+        
+</body>
+</html>
